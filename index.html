@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,44 +7,46 @@
     <title>Halloween is Coming~</title>
     
 	<link href="css/style.css" rel="stylesheet" type="text/css">
-
+  
 </head>
 <body>
 <div id="background" class="container">
  
     <h1 class="welcome">HALLOWEEN IS COMING</h1>
-    
+    <form class="hidden" id="login-form">
+        <input
+          maxlength="15"
+          type="text"
+          placeholder="What is your name?" required />
+        <input type="submit" value="LogIn" />
+      </form>
+      <h1 id="greeting" class="hidden"></h1>
      
     <div id="dday">
         <h1>COUNTDOWN</h1>
         <span class="days">days</span>
         <h1 class="clock">00:00:00</h1>
+        <div id="weather">
+            <span>city</span>
+            <span>weather</span>
+        </div>
     </div>
-    <form class="hidden" id="login-form">
 
-        <input
-          required
-          maxlength="15"
-          type="text"
-          placeholder="What is your name?"
-        />
-        <input type="submit" value="LogIn" />
+    
+     <form id="todo-form">
+        <input type="text" placeholder="To-do List" required />
       </form>
-      <h1 id="greeting" class="hidden"></h1>
 
 
-     <div class="checklist">
-        <H4>check list</H4>
-     </div> 
-    <div id="weather">
-       
-        <span>city</span>
-        <span>weather</span>
-    </div>
+      <ul id="todo-list">
+
+      </ul>
+
 </div>
     <script src="js/name.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
 </body>
 </html>

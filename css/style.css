@@ -1,13 +1,22 @@
 @charset "utf-8";
-/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Do+Hyeon&family=PT+Mono&display=swap');
+
+
 *{margin:0 auto;
 padding:0;
-text-align:center;}
+text-align:center;
+font-family: 'Audiowide', cursive;
+}
 
-body{height:100%; width:100%;position: absolute; overflow:hidden;background-color:black; }
+body{height:100%; width:100%;
+  position: absolute; overflow:hidden;
+  background-color:black; }
 .hidden{display:none;}
-#background{width: 100%; height: 100%;
- 
+
+.welcome{color:orange; font-size:3.5rem;}
+
+/*랜덤배경*/
+#background{width: 100%; height: 100%; 
   position: absolute;
   top: 0;
   left: 0;
@@ -24,12 +33,100 @@ body{height:100%; width:100%;position: absolute; overflow:hidden;background-colo
  }
 img{width:100%; opacity:0.4;}
 
-#login-form{color:white; font-size:2rem;}
-input{padding:10px; border-radius: 30px;}
 
-#greeting{color:white;}
-#dday{background-color:black; padding:40px; color:white;}
-.days{font-size:6.2em; color:white;}
-.clock{font-size:4.2em;color:white;}
+/*로그인*/
+#login-form{margin-bottom:2rem; color:white;}
+#greeting{color:white;margin-bottom:2rem; font-family: 'Do Hyeon', sans-serif;}
 
-#weather{background-color:white; padding:10px 50px;border-radius: 20px;margin-top:40px; background-color:rgba(255, 255, 255, 0.5);}
+#login-form input{
+  padding:0.5rem;
+  font-size:1.3rem;
+  border: none;
+  background-color: transparent;
+  color: white;
+  border-bottom: 1px solid white;
+  padding-top: 20px;
+  transition: border-color 0.5s ease-in-out;}
+
+
+#login-form input:focus {
+    outline: none;
+    border-color:orange;
+  }
+#login-form input:focus::placeholder {
+    opacity: 0;}
+
+#login-form input::placeholder {
+      font-size: 1.2rem;
+      color: white;}
+
+#login-form input:last-child{display:none;}
+
+/*카운트다운*/
+
+#dday{background-color:black; padding:1.5rem 3rem; color:white;
+  margin-bottom:1rem;}
+
+.days{font-size:8rem; color:white;}
+.clock{font-size:3rem;color:white;font-family: 'PT Mono', monospace;
+  margin-bottom:0.6rem;}
+
+/*날씨*/
+
+  #weather{  padding:10px 50px;border-radius: 20px;
+  background-color:rgba(255, 181, 43, 0.6);}
+
+  /*할일*/
+
+  #todo-form {
+    margin-bottom: 1rem;
+  }
+  #todo-form input {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 1.3rem;
+    border-bottom: 1px solid white;
+    padding-top: 20px;
+    transition: border-color 0.5s ease-in-out;
+  }
+  #todo-form input:focus {font-family: 'Do Hyeon', sans-serif;
+    outline: none;
+    border-color:orange;
+  }
+  #todo-form input:focus::placeholder {
+    opacity: 0;
+  }
+  #todo-form input::placeholder {
+    font-size: 1.2rem;
+    color: white;}
+  
+  #todo-list {font-family: 'Do Hyeon', sans-serif;
+    list-style: none;
+    width: 250px;
+    font-size:0.8rem;
+  }
+  
+  li {
+    font-family: 'Do Hyeon', sans-serif;
+    color:white;
+    width: 100%;
+    position: relative;
+    padding: 5px 0px;
+    border-bottom: 1px solid transparent;
+    will-change: border-color;
+    transition: border-color 0.5s ease-in-out;
+  }
+  
+  li button{color:orange;
+    font-size:0.3rem;
+    border: none;
+    background-color: transparent;}
+  
+  li button:hover{font-weight: bold;
+  color:aquamarine;}
+  
+  li span:nth-child(2) {
+    overflow-wrap: break-word;
+  }
+  
